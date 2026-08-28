@@ -55,22 +55,25 @@ Build an opt-in, privacy-preserving learning layer that uses aggregated recommen
 ## Encroachment Threat Assessment
 
 ### 1. Platform Encroachment
-**Attacker:**
-**Vector:**
-**Time-to-threat:**
-**% of value at risk:**
+**Attacker:**Intuit / QuickBooks
+**Vector:** 
+Adds broader AI decision intelligence across receivables, cash flow, payments, reporting, and business operations using the financial data it already owns. It could replicate basic prioritization, recommendations, alerts, and AI-generated actions quickly.
+**Time-to-threat:** 6-12 months
+**% of value at risk:** 60%
 
 ### 2. Vertical Competitor
-**Attacker:**
+**Attacker:** AccountingSuite 
 **Vector:**
-**Time-to-threat:**
-**% of value at risk:**
+Extends its existing accounting, inventory, sales, purchasing, and operational workflows with AI that surfaces issues and recommends actions across the business. Because its product footprint is closer to AIM, it could mimic much of the cross-functional intelligence experience.
+**Time-to-threat:** 6-12 months
+**% of value at risk:** 75%
 
 ### 3. Adjacent Expansion
-**Attacker:**
+**Attacker:** Oracle NetSuite
 **Vector:**
-**Time-to-threat:**
-**% of value at risk:**
+Expands AI-driven ERP intelligence further down-market, combining financial, customer, inventory, order, and manufacturing data to recommend operational and financial actions.
+**Time-to-threat:** 12-24 months
+**% of value at risk:** 50%
 
 ---
 
@@ -78,9 +81,20 @@ Build an opt-in, privacy-preserving learning layer that uses aggregated recommen
 
 *Your partner played the Big Tech attacker. What was their plan to kill you?*
 
-**Attacker:**
+**Attacker:** Intuit/Quickbooks
 **Attack vector (target the weakest loop):**
+Use QuickBooks’ large customer base and existing accounting data to create cross-customer benchmarks and AI recommendations that improve faster as more businesses use them. Bundle the capability into the existing QuickBooks experience so customers receive useful intelligence without adopting a separate product.
 **Weeks 1-4 - what they ship:**
+Launch a “Business Priorities” experience inside QuickBooks that identifies what needs attention across receivables, cash flow, expenses, and customer activity. It prioritizes issues, explains why they matter, predicts potential impact, and recommends next actions. Because QuickBooks already has large volumes of transaction and payment data, it can also introduce peer benchmarks such as typical payment behavior and cash-flow patterns for similar businesses.
 **Weeks 5-8 - how they poach users:**
+Bundle the intelligence into an existing QuickBooks plan or offer it as a low-cost upgrade. Target small businesses with messaging such as “Know what needs attention before it becomes a problem.” Use existing accountant relationships, customer channels, and easy data migration to reduce the friction of trying or switching to the new capability.
 **Weeks 9-12 - why users don't come back:**
+Once customers begin using the intelligence inside the same system where they invoice, receive payments, reconcile accounts, and work with their accountant, switching becomes less attractive. QuickBooks also begins learning each company’s behavior and accumulating recommendation and outcome history, increasing personalization over time.
 **Your defense:**
+Deep integration across accounting, sales, inventory, purchasing, work orders, production, and constraints.
+Proprietary Throughput Accounting decision logic.
+Capturing every accept, edit, rejection, and override of an AI recommendation.
+Connecting those decisions to actual throughput and financial outcomes.
+Building customer-specific intelligence that learns how each business operates.
+Creating privacy-safe benchmarking where appropriate.
+Making AIM's recommendations explain constraint and throughput impact, not merely financial risk.
