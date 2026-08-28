@@ -26,7 +26,6 @@ As AIM learns how a specific company operates, recommendations can become more t
 ### Domain Context Loop - 3/5
 **What you capture today:**
 AIM has the potential to connect data across accounting and operations, including receivables, sales orders, inventory, purchasing, work orders, production constraints, Totally Variable Cost, and throughput.
-
 A receivables decision therefore does not have to be evaluated in isolation. AIM can consider whether an overdue customer also has open orders, whether those orders require constrained capacity, and how much future throughput is associated with them.
 **How it compounds:**
 Activity in one AIM module improves intelligence in another.
@@ -44,8 +43,11 @@ Which inventory conditions commonly precede throughput loss
 Which constraint-utilization patterns correlate with declining throughput
 How similar manufacturers respond to specific operational conditions
 This could eventually create industry-level benchmarks and improve recommendations for new customers more quickly.
+
 **Total Flywheel Score: 8/20**
+
 **Weakest Loop:** 1/5 Network
+
 **Fix for weakest loop:**
 Build an opt-in, privacy-preserving learning layer that uses aggregated recommendation and outcome data across customers to identify benchmark patterns and improve AIM Intelligence without exposing individual customer information.
 ---
