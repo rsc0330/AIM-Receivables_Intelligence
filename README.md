@@ -23,7 +23,7 @@
 **What we're building, for whom, why now.**
 
 - **Product:**
--   AIM Receivables Intelligence
+-   AIM Intelligence
 - **AI Value Archetype:**
 -   Bet
 - **Vulnerability Scores:** Moat 3/5 · Data 2/5 · Platform 2/5
