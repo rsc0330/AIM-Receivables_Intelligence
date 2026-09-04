@@ -18,12 +18,19 @@ Coverage gaps identified by partner: Additional testing is needed for conflictin
 ## Confidence UX Design
 
 **Approach:** show uncertainty / tiered confidence / human-in-loop trigger
-
+Combine tiered confidence, visible uncertainty, and human decision control. AIM Intelligence is a decision-support product, not an autonomous decision-maker. Confidence changes how strongly AIM presents a recommendation, but AIM never automatically executes or changes a business decision.
 **High confidence (>90%):**
+UI + copy when you're sure:
+Show one clear recommendation with the key throughput-accounting drivers, assumptions, and supporting data. Explain why the recommendation is expected to improve the business outcome. The user decides whether to act; AIM Intelligence never executes the decision automatically.
 **Medium confidence (70-90%):**
+What visibly softens?
+Show 2–3 possible recommendations based on different assumptions or scenarios. Clearly identify which assumptions cause the recommendation to change and show the supporting data so the user can compare the options and apply their own business judgment.
 **Low confidence (<70%):**
+Block · escalate · human queue?
+Do not make a directional recommendation. Tell the user that there is not enough reliable information to recommend a decision and identify the missing, conflicting, or unreliable data or assumptions that need to be resolved.
 
 **User control surface:**
+Y — confidence thresholds can be configured at the company/admin level within defined guardrails to reflect different levels of business risk tolerance.
 
 ## Reliability Contract
 
