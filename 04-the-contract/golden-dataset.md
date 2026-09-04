@@ -4,7 +4,7 @@
 
 | # | Input | Expected Output | Edge Case? | Judge Type |
 |---|-------|----------------|-----------|-----------|
-| 1 |Customer demand supports $120K/week in sales. Assembly can support $125K/week and packaging $130K/week, but machining can support only $82K/week. Packaging utilization is only 58%, and management is considering adding packaging staff. | | Y/N | rule / LLM |
+| 1 |Customer demand supports $120K/week in sales. Assembly can support $125K/week and packaging $130K/week, but machining can support only $82K/week. Packaging utilization is only 58%, and management is considering adding packaging staff. |Identify machining as the system constraint. Recommend improving or expanding machining capacity before adding resources to packaging. Explain that the recommendation is based on impact to total throughput, not local utilization. | N | rule & LLM |
 | 2 | | | Y/N | rule / LLM |
 | 3 | | | Y/N | rule / LLM |
 | 4 | | | Y/N | rule / LLM |
