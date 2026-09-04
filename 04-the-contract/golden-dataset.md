@@ -19,12 +19,15 @@ Coverage gaps identified by partner: Additional testing is needed for conflictin
 
 **Approach:** show uncertainty / tiered confidence / human-in-loop trigger
 Combine tiered confidence, visible uncertainty, and human decision control. AIM Intelligence is a decision-support product, not an autonomous decision-maker. Confidence changes how strongly AIM presents a recommendation, but AIM never automatically executes or changes a business decision.
+
 **High confidence (>90%):**
 UI + copy when you're sure:
 Show one clear recommendation with the key throughput-accounting drivers, assumptions, and supporting data. Explain why the recommendation is expected to improve the business outcome. The user decides whether to act; AIM Intelligence never executes the decision automatically.
+
 **Medium confidence (70-90%):**
 What visibly softens?
 Show 2–3 possible recommendations based on different assumptions or scenarios. Clearly identify which assumptions cause the recommendation to change and show the supporting data so the user can compare the options and apply their own business judgment.
+
 **Low confidence (<70%):**
 Block · escalate · human queue?
 Do not make a directional recommendation. Tell the user that there is not enough reliable information to recommend a decision and identify the missing, conflicting, or unreliable data or assumptions that need to be resolved.
@@ -32,17 +35,37 @@ Do not make a directional recommendation. Tell the user that there is not enough
 **User control surface:**
 Y — confidence thresholds can be configured at the company/admin level within defined guardrails to reflect different levels of business risk tolerance.
 
+See AI reasoning? Y — show the key inputs, throughput-accounting drivers, assumptions, evidence, and rationale behind the recommendation rather than exposing raw model reasoning.
+
+Correct & override? Y — users retain final decision authority and can correct assumptions, inputs, or recommendations.
+
+Corrections → model? Y — corrections should feed the evaluation and product-improvement process, but should not immediately retrain or change the model based on a single user correction.
+
 ## Reliability Contract
 
 | Metric | Target | Measurement | Alert Threshold |
 |--------|--------|-------------|-----------------|
-| Accuracy | | | |
-| Hallucination rate | | | |
-| Latency (p95) | | | |
-| Drift velocity | | | |
+| Accuracy |98%|Weekly evaluation against the golden dataset; rule-based checks for calculations and data grounding plus LLM-as-Judge for reasoning quality and recommendation support |<95% → investigate failed cases, review prompts/model changes, and restrict low-confidence recommendations until resolved |
+| Hallucination rate |<0.5%; zero tolerance for fabricated customer financial or operational data |Weekly golden-dataset evaluation plus production logging for unsupported facts, invented values, or claims not grounded in source data |Any fabricated customer financial or operational value → critical review; >1% overall hallucination rate → suppress affected recommendation flows and audit |
+| Latency (p95) |<5 seconds |Continuous production monitoring of end-to-end recommendation response time |>8 seconds p95 for 10 minutes → investigate model, routing, or infrastructure degradation |
+| Drift velocity |<0.5% per week |4-week rolling trend of golden-dataset accuracy and hallucination results |>1% decline per week or two consecutive weeks below target → golden-dataset and model/prompt audit |
 
 ## HITL Architecture
 <!-- When does a human step in? What's the escalation path? -->
+AIM Intelligence is advisory only and is never permitted to automatically execute a recommendation, change customer data, or take action on the user's behalf.
+
+High confidence: Present the recommendation, supporting reasoning, source data, and assumptions to the user.
+Medium confidence: Present multiple possible recommendations based on different assumptions rather than a single definitive answer.
+Low confidence: Ask the user for additional information needed to improve confidence. If confidence remains low, provide scenarios and tradeoffs instead of a prescriptive recommendation.
+Critical reliability failure: Suppress the recommendation and flag the case for internal review, especially when the system detects fabricated data, incorrect calculations, unsupported reasoning, or a significant evaluation regression.
+Customer organizations may configure confidence thresholds based on their risk tolerance, within minimum safety and reliability guardrails established by AIM.
+
+The human remains the final decision-maker in all cases.
 
 ## Red-Team Findings
 *What failure mode did your partner find that you missed?*
+A recommendation can be factually accurate and mathematically correct but still be misleading because it is based on an incomplete or incorrect assumption about the customer's operating constraints.
+
+For example, AIM could correctly calculate that prioritizing a specific order would maximize throughput, while missing a customer-specific constraint such as labor availability, material shortages, contractual commitments, or delivery requirements.
+
+This means reliability cannot be measured only by calculation accuracy. AIM must clearly surface the assumptions behind its recommendation and ask for additional information or show alternative scenarios when important context is missing.
