@@ -38,11 +38,20 @@ When this loop functions, AIM can continue improving even when the underlying fr
 
 ## Governance Policy
 
-**Scope:**
-**Autonomy boundaries:**
-**Escalation triggers:**
-**Audit cadence:**
-**Regulatory exposure (EU AI Act / other):**
+Scope:
+Applies to AIM Intelligence features that use AI to analyze customer and operational data, identify constraints or opportunities using Throughput Accounting principles, generate scenarios, and provide recommendations to users.
+
+Autonomy boundaries:
+AIM Intelligence is advisory and decision-support only. It may analyze data, identify patterns, explain reasoning, surface assumptions, and present multiple possible recommendations. It may not automatically execute decisions, modify accounting or operational records, initiate transactions, communicate with customers, or make irreversible business changes. Final decision authority remains with the user.
+
+Escalation triggers:
+Human review is required when confidence falls below the customer-configured threshold; required data is missing, conflicting, or unreliable; recommendations could have significant financial or operational impact; the AI produces unsupported or potentially hallucinated claims; results materially differ from established patterns; or the requested action falls outside the system's approved decision-support scope.
+
+Audit cadence:
+Monitor reliability, hallucination, confidence, latency, and drift metrics on an ongoing basis, with a formal governance review at least quarterly. Conduct an additional review after significant model, prompt, data, architecture, or policy changes and after any material AI incident.
+
+Regulatory exposure (EU AI Act / other):
+Core AIM Intelligence is expected to have relatively limited EU AI Act exposure when used strictly as business decision-support with meaningful human oversight and no autonomous decision execution. However, classification should be reassessed if the product is used for regulated or high-risk purposes such as employment decisions, creditworthiness decisions involving individuals, or other Annex III use cases. Users should be clearly informed when they are interacting with AI, and appropriate documentation, monitoring, auditability, data governance, and human oversight should be maintained. Privacy regulations such as GDPR may also apply when personal data is processed.
 
 ## Agent Topology
 <!-- If using agents: what can each agent do? What can't it do? Who approves what? -->
