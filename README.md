@@ -7,14 +7,17 @@
 
 ## Strategy at a Glance
 
-| Component | Module | Status | Key Artifact |
-|-----------|--------|--------|-------------|
-| **The Bet** | M1 | [ ] In Progress | [`01-the-bet/`](./01-the-bet/) |
-| **The Moat** | M2 | [x] Complete | [`02-the-moat/`](./02-the-moat/) |
-| **The Margin** | M3 | [ ] | `03-the-margin/` |
-| **The Contract** | M4 | [ ] | `04-the-contract/` |
-| **The Guardrails** | M5 | [ ] | `05-the-guardrails/` |
-| **The Pitch** | M6 | [ ] | `06-the-pitch/` |
+## Strategy at a Glance
+
+| Component          | Module | Status          | Key Artifact                                                                                                |
+| ------------------ | ------ | --------------- | ----------------------------------------------------------------------------------------------------------- |
+| **The Bet**        | M1     | [ ] In Progress | [`01-the-bet/`](https://github.com/rsc0330/AIM-Receivables_Intelligence/blob/main/01-the-bet)               |
+| **The Moat**       | M2     | [x] Complete    | [`02-the-moat/`](https://github.com/rsc0330/AIM-Receivables_Intelligence/blob/main/02-the-moat)             |
+| **The Margin**     | M3     | [x] Complete    | [`03-the-margin/`](https://github.com/rsc0330/AIM-Receivables_Intelligence/blob/main/03-the-margin)         |
+| **The Contract**   | M4     | [x] Complete    | [`04-the-contract/`](https://github.com/rsc0330/AIM-Receivables_Intelligence/blob/main/04-the-contract)     |
+| **The Guardrails** | M5     | [x] Complete    | [`05-the-guardrails/`](https://github.com/rsc0330/AIM-Receivables_Intelligence/blob/main/05-the-guardrails) |
+| **The Pitch**      | M6     | [x] Complete    | [`06-the-pitch/`](https://github.com/rsc0330/AIM-Receivables_Intelligence/blob/main/06-the-pitch)           |
+
 
 ---
 
