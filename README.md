@@ -43,7 +43,7 @@ Customer financial information must be protected through appropriate access and 
 
 - **Confidence:** H / M / L
 -   M
-- **Prototype:** [link]
+- **Prototype:** https://lovable.dev/projects/aa80c391-b96e-4911-916b-f67b0c33612a?magic_link=mc_691e2863-a244-4ae8-bd01-bc33a3fb2878
 - **Kill Criteria:**
 We would stop or significantly change the bet if customer research and prototype testing show that:
 A/R users do not consider account prioritization and follow-up a meaningful problem.
