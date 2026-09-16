@@ -59,11 +59,11 @@ Core AIM Intelligence is expected to have relatively limited EU AI Act exposure 
 ## Shadow AI Audit
 
 | Tool | Owner | Risk Level | Decision |
-|------|-------|-----------|----------|
-| | | H / M / L | keep / govern / kill |
-| | | H / M / L | keep / govern / kill |
-| | | H / M / L | keep / govern / kill |
+|------|-------|------------|----------|
+| Unapproved public LLMs (ChatGPT, Claude, Gemini, etc.) used with AIM/customer data | Individual employees | H | govern |
+| AI meeting / transcription tools used for customer or internal meetings | Sales / Support / Product | M | govern |
+| Unapproved AI automation tools with ability to update records or trigger workflows | Individual employees / Operations | H | kill |
 
-**Total tools found:**
-**Tools after triage:**
-**Estimated hidden spend:**
+**Total tools found:** 3  
+**Tools after triage:** 2  
+**Estimated hidden spend:** ~$100–$200/month
